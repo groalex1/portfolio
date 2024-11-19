@@ -15,7 +15,7 @@ const Overlay = ({ links }) => {
 }
 
 Overlay.propTypes = {
-  links: PropTypes.links,
+  links: PropTypes.element,
 }
 
 export default Overlay

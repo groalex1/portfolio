@@ -14,7 +14,7 @@ const NavLink = ({ href, title }) => {
 
 NavLink.propTypes = {
 
-    href: PropTypes.Link.isRequired,
+    href: PropTypes.Link,
     title: PropTypes.string.isRequired,
 
 };
