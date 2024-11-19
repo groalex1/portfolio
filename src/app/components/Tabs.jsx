@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Tabs = ({active, selectTab, children}) => {
     const buttonClasses = active 
@@ -12,5 +14,13 @@ const Tabs = ({active, selectTab, children}) => {
         </button>
     )
 }
+
+Tabs.propTypes ={
+
+    active: PropTypes.bool.isRequired, 
+    selectTab: PropTypes.element, 
+    children: PropTypes.element,
+
+};
 
 export default Tabs

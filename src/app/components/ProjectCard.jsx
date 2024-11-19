@@ -1,6 +1,7 @@
 import React from 'react';
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 const ProjectCard = ({imgUrl, title, desc, gitURL, previewURL}) => {
   return (
@@ -25,5 +26,15 @@ const ProjectCard = ({imgUrl, title, desc, gitURL, previewURL}) => {
     </div>
   )
 }
+
+ProjectCard.propTypes = {
+
+    imgUrl: PropTypes.href,
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired, 
+    gitURL: PropTypes.href, 
+    previewURL: PropTypes.href
+
+};
 
 export default ProjectCard

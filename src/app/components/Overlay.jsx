@@ -1,5 +1,6 @@
-import React from 'react'
-import NavLink from './NavLink'
+import React from 'react';
+import NavLink from './NavLink';
+import PropTypes from 'prop-types';
 
 const Overlay = ({ links }) => {
   return (
@@ -11,6 +12,10 @@ const Overlay = ({ links }) => {
         ))}
     </ul>
   )
+}
+
+Overlay.propTypes = {
+  links: PropTypes.links,
 }
 
 export default Overlay

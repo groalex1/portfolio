@@ -1,4 +1,6 @@
 import Link from "next/link";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const NavLink = ({ href, title }) => {
     return(
@@ -8,6 +10,13 @@ const NavLink = ({ href, title }) => {
         </Link>
 
     )
+};
+
+NavLink.propTypes = {
+
+    href: PropTypes.Link.isRequired,
+    title: PropTypes.string.isRequired,
+
 };
 
 export default NavLink
