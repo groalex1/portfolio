@@ -1,5 +1,6 @@
-import localFont from "next/font/local";
 import "./globals.css";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function RootLayout({ children }) {
   return (
@@ -10,3 +11,9 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+
+  children: PropTypes.element,
+
+};
