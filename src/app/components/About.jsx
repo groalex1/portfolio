@@ -12,11 +12,11 @@ const tabData = [
         id: "skills",
         content: (
             <ul className='list-dic pl-2'>
-                <li>Example.js</li>
-                <li>Software</li>
-                <li>Yadda</li>
-                <li>Shmungus</li>
-                <li>Amongus</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>React/Next.js</li>
+                <li>SQL</li>
+                <li>Full Stack Development</li>
             </ul>
 
         )
@@ -26,10 +26,8 @@ const tabData = [
         id: "education",
         content: (
             <ul className='list-dic pl-2'>
-                <li>Bachelors Degree</li>
-                <li>Computer Science</li>
-                <li>University of Maryland: Global Campus</li>
-                <li>4.0 baby</li>
+                <li>B.S. Computer Science</li>
+                <li>University of Maryland: Global Campus Summa Cum Laude</li>
             </ul>
         )
     },
@@ -39,9 +37,9 @@ const tabData = [
         id: "experience",
         content: (
             <ul className='list-dic pl-2'>
-                <li>Software Developer</li>
-                <li>Software Development Intern</li>
-                <li>DataCenter Technician II</li>
+                <li>Software Developer with BeachRunners</li>
+                <li>Software Development Intern with FINRA</li>
+                <li>DataCenter Technician II with Google</li>
             </ul>
         )
 
@@ -51,7 +49,7 @@ const tabData = [
 
 const About = () => {
   const [tab, setTab] = useState("skills");
-  const [/*isPending,*/ startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
 
@@ -75,7 +73,7 @@ const About = () => {
                     <Tabs 
                         selectTab={() => handleTabChange("skills")}
                         active={tab === "skills"}>
-                            {" "}Skills{" "}
+                            {" "}Proficient Skills{" "}
                     </Tabs>
                     <Tabs 
                         selectTab={() => handleTabChange("education")}

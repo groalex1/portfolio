@@ -1,5 +1,6 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
+import {saveAs} from 'file-saver';
 
 const Hero = () => {
   return (
@@ -13,15 +14,15 @@ const Hero = () => {
                     Alexander
                 </h1>
                 <p className="text-gray-500 text-base sm:text-lg lg:text-xl mb-5">
-                    yadda yadda yadda yadda yadda yadda yadda yadda yadda
+                    Welcome to my portfolio site, stay a while :)
                 </p>
                 <div>
                     <button className="text-white w-full sm:w-fit px-6 py-3 mb-4 rounded-full mr-6 bg-gradient-to-br from-yellow-300 to-purple-400 bg-black border border-white hover:text-black">
                         Hire Me
                     </button>
-                    <button className="text-white w-full sm:w-fit px-6 py-3 mb-4 rounded-full bg-gradient-to-br from-yellow-300 to-purple-400 bg-black border border-white hover:text-black">
+                    <a href='public/Files/Alexander-Groman-Resume.pdf' download className="text-white w-full sm:w-fit px-6 py-3 mb-4 rounded-full bg-gradient-to-br from-yellow-300 to-purple-400 bg-black border border-white hover:text-black">
                         Download CV
-                    </button>
+                    </a>
                 </div>
             </div>
             <div className="col-span-5 place-self-center">
