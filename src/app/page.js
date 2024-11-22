@@ -5,10 +5,12 @@ import Projects from "./components/Projects";
 import Email from "./components/Email";
 import React from 'react';
 
+ /*bg-[url('/images/bgimg3.jpg')] bg-cover*/
+
 export default function Home() {
   return (
 
-    <main className="flex min-h-screen flex-col bg-[url('/images/bgimg3.jpg')] bg-cover">
+    <main className="flex min-h-screen flex-col bg-black">
       <Navbar/>
       <div className="container mt-24 mx-auto px-12 py-4">
         <Hero/>
