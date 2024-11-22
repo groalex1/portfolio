@@ -64,10 +64,12 @@ const About = () => {
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
                 <p className='text-base md:text-lg'>
-                    I am a full stack software developer I am a full stack software developer
-                    I am a full stack software developer I am a full stack software developer
-                    I am a full stack software developer I am a full stack software developer
-                    I am a full stack software developer I am a full stack software developer
+                I'm Alexander, a recently graduated software engineer. I'm fascinated by the sheer variety of things you can build with code, 
+                which explains why I've dipped my toes into so many different languages and frameworks.
+                </p>
+                <p className='text-base md:text-lg'>I've often coded bits and pieces of projects that interested me, whether or not they worked out each one taught me something new. 
+                I'm a firm believer in learning by doing, and I'm always eager to dive in. 
+                If you're looking for someone with a broad skillset and a passion for exploring the ever-evolving world of programming, here I am.
                 </p>
                 <div className='flex flex-row mt-8'>
                     <Tabs 

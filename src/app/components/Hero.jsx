@@ -26,17 +26,20 @@ const Hero = () => {
                 </div>
             </div>
             <div className="col-span-5 place-self-center">
-                <div className="rounded-full bg-blue-400 lg:w-[300px] lg:h-[300px] w-[220px] h-[220px] relative">
-                    <Image
-                        src ="/images/Avatar.png"
-                        alt = "avatar"
-                        className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        width = {200}
-                        height={200}
-                    />
+                <div className="rounded-full bg-purple-800 lg:w-[220px] lg:h-[220px] w-[220px] h-[220px] relative">
+                        <Image
+                            src ="/images/Hero_Image.png"
+                            alt = "avatar"
+                            className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            width = {200}
+                            height={200}
+                        />
                 </div>
             </div>
         </div>
+        <div className='pb-96'></div>
+        <div className='pb-96'></div>
+        <div className='pb-20'></div>
     </section>
   )
 }
