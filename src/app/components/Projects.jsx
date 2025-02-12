@@ -48,6 +48,7 @@ const Projects = () => {
                 />
             ))}
         </div>
+        <div className='pb-48'></div>
     </div>
   )
 }

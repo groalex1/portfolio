@@ -15,11 +15,11 @@ const NavLinks = [
   },
   {
     title:"Projects",
-    path:"#ProjectCard",
+    path: "#projects",
   },
   {
     title: "Contact",
-    path:"#contact",
+    path:"#email",
   }
 
 ]
