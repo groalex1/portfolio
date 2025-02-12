@@ -4,12 +4,12 @@ import ProjectCard from './ProjectCard'
     const projectsData = [
         {
             id: 1,
-            title: "Project 1",
-            desc: "Project 1 description",
+            title: "Portfolio Site",
+            desc: "A website developed in React Node.js using tailwind css for a single page site, you are here now! ",
             image: "/images/ProjectIMG/p1.png",
             tag: ["All", "Web"],
-            gitURL: "/",
-            previewURL: "/"
+            gitURL: "https://github.com/groalex1/portfolio",
+            previewURL: "https://www.alexanderdev.info"
         },
         {
             id: 2,
