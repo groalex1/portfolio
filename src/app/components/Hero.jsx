@@ -4,19 +4,19 @@ import {saveAs} from 'file-saver';
 
 const Hero = () => {
     return (
-      <section className="snap-section">
+      <section className="snap-section min-h-screen flex items-center justify-center snap-section">
         <div className="section-container flex items-center justify-center"> {/* Added justify-center */}
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center"> {/* Added gap and items-center */}
             {/* Text column */}
             <div className="col-span-6 place-self-center text-center sm:text-left">
               <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
                 <div className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-purple-400">
-                  Hi, I am {" "}
+                  Hi, I&apos;m {" "}
                 </div>
                 Alexander
               </h1>
               <p className="text-gray-500 text-base sm:text-lg lg:text-xl mb-5">
-                Welcome to my portfolio site, stay a while :)
+                Welcome to my portfolio site, stay a while :&#41;
               </p>
               <div className="pt-5">
                 <a 

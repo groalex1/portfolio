@@ -58,7 +58,7 @@ const About = () => {
         });
   };
   return (
-    <section className=' snap-section text-white'  id = "about"> 
+    <section className=' snap-section text-white min-h-screen flex items-center justify-center snap-section'  id = "about"> 
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
             <Image src = "/images/aboutIMG.png" width={500} height={500} alt="About section profile" />
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>

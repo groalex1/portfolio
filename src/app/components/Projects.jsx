@@ -33,7 +33,7 @@ import ProjectCard from './ProjectCard'
 
 const Projects = () => {
   return (
-    <section className="snap-section">
+    <section className="snap-section min-h-screen flex items-center justify-center snap-section">
         <div>
             <h2 className='text-4xl font-bold text-white mb-4'>My Projects</h2>
             <div className="grid md:grid-cols-3 gap-8 md:gap-12">

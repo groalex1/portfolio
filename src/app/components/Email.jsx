@@ -49,7 +49,7 @@ const Email = () => {
   };
 
   return (
-    <section className=' snap-section grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4' id="email">
+    <section className=' snap-section grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 min-h-screen items-center justify-center snap-section' id="email">
       <div>
         <h5 className='text-xl font-bold text-white my-2'>Hit me up</h5>
         <p className='text-slate-200 mb-4 max-w-md'>
@@ -60,7 +60,7 @@ const Email = () => {
           <Link href='https://github.com/groalex1'>
             <Image src={GithubIcon} alt='Github Icon' />
           </Link>
-          <Link href="www.linkedin.com/in/alexandergromanSWE">
+          <Link href="https://www.linkedin.com/in/alexandergromanSWE">
             <Image src={LinkedinIcon} alt='LinkedIn Icon' />
           </Link>
         </div>
