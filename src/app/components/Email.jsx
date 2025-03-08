@@ -53,8 +53,7 @@ const Email = () => {
       <div>
         <h5 className='text-xl font-bold text-white my-2'>Hit me up</h5>
         <p className='text-slate-200 mb-4 max-w-md'>
-          Add descriptive text about how and why someone should contact you here
-          Mention the form
+          Question? Proposal? Request? Just want to talk? <br></br>Here's the place.
         </p>
         <div className='socials flex flex-row gap-2'>
           <Link href='https://github.com/groalex1'>
