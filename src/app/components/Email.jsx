@@ -53,7 +53,7 @@ const Email = () => {
       <div>
         <h5 className='text-xl font-bold text-white my-2'>Hit me up</h5>
         <p className='text-slate-200 mb-4 max-w-md'>
-          Question? Proposal? Request? Just want to talk? <br></br>Here's the place.
+          Question? Proposal? Request? Just want to talk? <br></br>Here&apos;s the place.
         </p>
         <div className='socials flex flex-row gap-2'>
           <Link href='https://github.com/groalex1'>
