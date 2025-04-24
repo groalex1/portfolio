@@ -4,6 +4,7 @@ import GithubIcon from "../../../public/images/github-icon.svg";
 import LinkedinIcon from "../../../public/images/linkedin-icon.svg";
 import Link from 'next/link';
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const Email = () => {
   const [emailData, setEmailData] = useState({
@@ -49,79 +50,108 @@ const Email = () => {
   };
 
   return (
-    <section className=' snap-section grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 min-h-screen items-center justify-center snap-section' id="email">
-      <div>
-        <h5 className='text-xl font-bold text-white my-2'>Hit me up</h5>
-        <p className='text-slate-200 mb-4 max-w-md'>
-          Question? Proposal? Request? Just want to talk? <br></br>Here&apos;s the place.
-        </p>
-        <div className='socials flex flex-row gap-2'>
-          <Link href='https://github.com/groalex1'>
-            <Image src={GithubIcon} alt='Github Icon' />
-          </Link>
-          <Link href="https://www.linkedin.com/in/alexandergromanSWE">
-            <Image src={LinkedinIcon} alt='LinkedIn Icon' />
-          </Link>
+    <section className='snap-section min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-16 px-4' id="email">
+      <div className="max-w-6xl w-full mx-auto">
+        <AnimatedSection>
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Get In Touch</h2>
+        </AnimatedSection>
+        
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16">
+          <AnimatedSection>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+              <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-4'>Hit me up</h3>
+              <p className='text-gray-600 dark:text-gray-300 mb-6'>
+                Question? Proposal? Request? Just want to talk? <br />Here&apos;s the place.
+              </p>
+              <div className='socials flex flex-row gap-4 mb-6'>
+                <Link href='https://github.com/groalex1' className="hover:opacity-80 transition-opacity">
+                  <Image src={GithubIcon} alt='Github Icon' className="w-8 h-8 dark:invert" />
+                </Link>
+                <Link href="https://www.linkedin.com/in/alexandergromanSWE" className="hover:opacity-80 transition-opacity">
+                  <Image src={LinkedinIcon} alt='LinkedIn Icon' className="w-8 h-8" />
+                </Link>
+              </div>
+              
+              <div className="hidden md:block">
+                <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Let's build something amazing together</h4>
+                <p className="text-gray-600 dark:text-gray-300">
+                  I'm always open to new opportunities and interesting projects. Whether you need a full website, 
+                  a specific feature, or just want to chat about tech, I'd love to hear from you.
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={200}>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+              <form onSubmit={handleSubmit} className='flex flex-col gap-5'>
+                <div>
+                  <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
+                    Your Email
+                  </label>
+                  <input
+                    type='email'
+                    id='email'
+                    name='email'
+                    value={emailData.email}
+                    onChange={handleChange}
+                    className='bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 
+                              text-gray-900 dark:text-white text-sm rounded-lg block w-full p-2.5
+                              focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent'
+                    required
+                    placeholder='default@domain.com'
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor='subject' className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
+                    Subject
+                  </label>
+                  <input
+                    type='text'
+                    id='subject'
+                    name='subject'
+                    value={emailData.subject}
+                    onChange={handleChange}
+                    className='bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 
+                              text-gray-900 dark:text-white text-sm rounded-lg block w-full p-2.5
+                              focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent'
+                    required
+                    placeholder='What is this about?'
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor='message' className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
+                    Message
+                  </label>
+                  <textarea
+                    id='message'
+                    name='message'
+                    value={emailData.message}
+                    onChange={handleChange}
+                    className='bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 
+                              text-gray-900 dark:text-white text-sm rounded-lg block w-full p-2.5
+                              focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent'
+                    required
+                    rows={5}
+                    placeholder='Your message here...'
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className='bg-gradient-to-r from-secondary-light to-primary-light dark:from-secondary-dark dark:to-primary-dark
+                            text-white font-medium py-2.5 px-5 rounded-lg hover:shadow-lg transition-all duration-300
+                            disabled:opacity-70 disabled:cursor-not-allowed'
+                >
+                  {loading ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
+            </div>
+          </AnimatedSection>
         </div>
-      </div>
-      <div>
-        <form onSubmit={handleSubmit} className='flex flex-col gap-6'>
-          <div>
-            <label htmlFor='email' className='text-white block mb-1 text-sm font-medium'>
-              Your Email
-            </label>
-            <input
-              type='email'
-              id='email'
-              name='email'
-              value={emailData.email}
-              onChange={handleChange}
-              className='bg-yellow-100 border border-gray-900 placeholder-black text-gray-900 text-sm rounded-lg block w-full p-2.5'
-              required
-              placeholder='default@domain.com'
-            />
-          </div>
-
-          <div>
-            <label htmlFor='subject' className='text-white block mb-2 text-sm font-medium'>
-              Subject
-            </label>
-            <input
-              type='text'
-              id='subject'
-              name='subject'
-              value={emailData.subject}
-              onChange={handleChange}
-              className='bg-yellow-100 border border-gray-900 placeholder-black text-gray-900 text-sm rounded-lg block w-full p-2.5'
-              required
-              placeholder='Content Here!'
-            />
-          </div>
-
-          <div>
-            <label htmlFor='message' className='text-white block mb-2 text-sm font-medium'>
-              Message
-            </label>
-            <textarea
-              id='message'
-              name='message'
-              value={emailData.message}
-              onChange={handleChange}
-              className='bg-yellow-100 border border-gray-900 placeholder-black text-gray-900 text-sm rounded-lg block w-full p-2.5'
-              required
-              rows={4}
-              placeholder='Your message here...'
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={loading}
-            className='bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 px-4 rounded-lg'
-          >
-            {loading ? 'Sending...' : 'Send Message'}
-          </button>
-        </form>
       </div>
     </section>
   );

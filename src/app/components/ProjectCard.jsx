@@ -2,39 +2,61 @@ import React from 'react';
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 
-const ProjectCard = ({imgUrl, title, desc, gitURL, previewURL}) => {
+const ProjectCard = ({ imgUrl, title, desc, gitURL, previewURL, tags }) => {
   return (
-    <div>
-        <div 
-            className = "h-52 md:h-72 rounded-t-xl relative group"   
-            style = {{background: `url(${imgUrl})`, backgroundSize: "cover" }}> 
-            <div className='overlay     items-center justify-center absolute top-0 left-0 h-full w-full bg-slate-500 bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500'>
-                <Link href = {gitURL} className='h-14 w-14 mr-3 border-2 relative rounded-full border-slate-100 hover:border-white group/link '>
-                    <CodeBracketIcon className='h-10 w-10 text-slate-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white' />
-                </Link>
-                <Link href = {previewURL} className='h-14 w-14 border-2 relative rounded-full border-slate-100 hover:border-white group/link '>
-                    <EyeIcon className='h-10 w-10 text-slate-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white' />
-                </Link>
-            </div>
+    <div className="group overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+      <div className="h-52 md:h-64 relative overflow-hidden">
+        <Image 
+          src={imgUrl} 
+          alt={title} 
+          fill 
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+          <div className="flex gap-3">
+            <Link href={gitURL} className="h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/40 transition-colors">
+              <CodeBracketIcon className="h-5 w-5 text-white" />
+            </Link>
+            <Link href={previewURL} className="h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/40 transition-colors">
+              <EyeIcon className="h-5 w-5 text-white" />
+            </Link>
+          </div>
         </div>
-        <div className='text-white rounded-b-xl bg-black py-6 px-4'>
-            <h5 className='text-xl font-semibold mb-2'>{title}</h5>
-            <p className='text-slate-400'>{desc}</p>
-
-        </div>
+      </div>
+      
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">{desc}</p>
+        
+        {tags && (
+          <div className="flex flex-wrap gap-2 mt-auto">
+            {tags.map((tag, index) => (
+              tag !== "All" && (
+                <span 
+                  key={index} 
+                  className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200"
+                >
+                  {tag}
+                </span>
+              )
+            ))}
+          </div>
+        )}
+      </div>
     </div>
-  )
-}
-
-ProjectCard.propTypes = {
-
-    imgUrl: PropTypes.href,
-    title: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired, 
-    gitURL: PropTypes.href, 
-    previewURL: PropTypes.href
-
+  );
 };
 
-export default ProjectCard
+ProjectCard.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired, 
+  gitURL: PropTypes.string.isRequired, 
+  previewURL: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string)
+};
+
+export default ProjectCard;
