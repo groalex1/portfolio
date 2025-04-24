@@ -73,10 +73,10 @@ const Email = () => {
               </div>
               
               <div className="hidden md:block">
-                <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Let's build something amazing together</h4>
+                <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Let&apos;s build something amazing together</h4>
                 <p className="text-gray-600 dark:text-gray-300">
-                  I'm always open to new opportunities and interesting projects. Whether you need a full website, 
-                  a specific feature, or just want to chat about tech, I'd love to hear from you.
+                  I&apos;m always open to new opportunities and interesting projects. Whether you need a full website, 
+                  a specific feature, or just want to chat about tech, I&apos;d love to hear from you.
                 </p>
               </div>
             </div>

@@ -39,7 +39,7 @@ const Projects = () => {
             <AnimatedSection>
                 <h2 className='text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center'>My Projects</h2>
                 <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-center mb-12">
-                  Here are some of the projects I've worked on. Each represents different skills and technologies I've explored.
+                  Here are some of the projects I&apos;ve worked on. Each represents different skills and technologies I&apos;ve explored.
                 </p>
             </AnimatedSection>
             
