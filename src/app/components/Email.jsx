@@ -31,7 +31,7 @@ const Email = () => {
         alert('Email sent successfully!');
         setEmailData({ email: '', subject: '', message: '' });
       } else {
-        alert('Failed to send email. Please try again.');
+        alert('Awkward! Looks like this section is working properly at the moment, please try again or email me directly at gromanalexander@gmail.com');
       }
     } catch (error) {
       console.error('Error sending email:', error);
